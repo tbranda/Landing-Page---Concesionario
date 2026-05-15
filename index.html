@@ -1,150 +1,207 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./assets/icons/icons8-alquiler-de-coches-100.png" type="image" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>RentCar Premium</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="logo">
-          <img
-            src="assets/icons/icons8-alquiler-de-coches-100.png" alt="Logo de RentaCar Premium"/>
-          <div class="logo-text">
-            <b>RentaCar Premium</b>
-            <p>Tu viaje, nuestra pasión</p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./assets/icons/icons8-alquiler-de-coches-100.png" type="image" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>RentCar Premium</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="assets/icons/icons8-alquiler-de-coches-100.png" alt="Logo de RentaCar Premium" />
+        <div class="logo-text">
+          <b>RentaCar Premium</b>
+          <p>Tu viaje, nuestra pasión</p>
+        </div>
+      </div>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Vehiculos</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+      <div class="button-reserve" ">
+            <a href=" reserve.html"><button>Reservar Vehiculo</button></a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Conduce el Auto de tus <br>Sueños Hoy</h1>
+        </h1>
+        <p>Encuentra el vehículo perfecto para cada ocasión. Desde autos económicos hasta deportivos de lujo, tenemos la
+          flota más completa con las mejores tarifas del mercado.</p>
+        <div class="hero-button">
+          <button>Explorar Vehiculos ></button>
+          <button id="button-transparent">Contactar Ahora</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="service-tittle">
+        <h2><b>Nuestros Servicios</b></h2>
+        <p>Ofrecemos soluciones completas de alquiler de vehículos con servicios premium incluidos</p>
+      </div>
+      <div class="container-serveces">
+        <article class="card">
+          <img class="calendar-icon" src="assets/icons/icon-calendar.png" alt="Icono azul de calendario">
+          <h3>Alquiler por Día</h3>
+          <p>Renta vehículos por el tiempo que necesites, desde un día hasta varios meses.</p>
+        </article>
+
+        <article class="card">
+          <img src="assets/icons/icon-users.png" alt="Icono azul de usuarios">
+          <h3>Alquiler Corporativo</h3>
+          <p>Soluciones personalizadas para empresas con tarifas especiales y gestión de flotas.</p>
+        </article>
+
+        <article class="card">
+          <img src="assets/icons/icon-headphone.png" alt="Icono azul de auriculares">
+          <h3>Asistencia en Ruta</h3>
+          <p>Soporte 24/7 en carretera para cualquier eventualidad durante tu viaje.</p>
+        </article>
+
+        <article class="card">
+          <img src="assets/icons/icon-shield.png" alt="Icono azul de un escudo">
+          <h3>Seguro Incluido</h3>
+          <p>Todos nuestros vehículos cuentan con seguro completo para tu tranquilidad.</p>
+        </article>
+
+        <article class="card">
+          <img src="assets/icons/icon-house.png" alt="Icono azul de una casa">
+          <h3>Entrega a Domicilio</h3>
+          <p>Llevamos el vehículo directamente a tu ubicación sin costo adicional.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cars">
+      <div class="cars-tittle">
+        <h2><b>Vehiculos Destacados</b></h2>
+        <p>Nuestra selección premium de vehículos disponibles para renta inmediata.</p>
+      </div>
+      <div class="container-serveces">
+        <article class="cars-card">
+          <div class="image-wrapper">
+            <img class="cars-photo" src="assets/img/car1.jpg"
+              alt="Lamborghini Huracan rojo estacionado en una carretera">
+            <span class="price-tag">1,200/Dia</span>
           </div>
-        </div>
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Vehiculos</a></li>
-          <li><a href="#">Nosotros</a></li>
-          <li><a href="#">Contacto</a></li>
-        </ul>
-        <div class="button-reserve" ">
-            <a href="reserve.html"><button>Reservar Vehiculo</button></a>
-        </div>
-      </nav>
-    </header>
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Conduce el Auto de tus <br>Sueños Hoy</h1></h1>
-                <p>Encuentra el vehículo perfecto para cada ocasión. Desde autos económicos hasta deportivos de lujo, tenemos la flota más completa con las mejores tarifas del mercado.</p>
-                <div class="hero-button">
-                    <button>Explorar Vehiculos ></button>
-                    <button id="button-transparent">Contactar Ahora</button>
-                </div>
+          <h3>Lamborgini Huracan</h3>
+          <h4>Superdeportivo</h4>
+          <p>Velocidad y elegancia en un vehículo icónico.</p>
+          <button>Reservar Ahora</button>
+        </article>
+
+        <article class="cars-card">
+          <div class="image-wrapper">
+            <img class="cars-photo" src="assets/img/car2.jpg" alt="BMW Serie 5 color gris">
+            <span class="price-tag">350/Día</span>
+          </div>
+          <h3>BMW Serie 5</h3>
+          <h4>Ejecutivo</h4>
+          <p>Ideal para viajes de negocios, con un interior lujoso y tecnología avanzada.</p>
+          <button>Reservar Ahora</button>
+        </article>
+
+        <article class="cars-card">
+          <div class="image-wrapper">
+            <img class="cars-photo" src="assets/img/car3.jpg"
+              alt="SUV 4x4 Premium color gris estacionado en un paisaje montañoso">
+            <span class="price-tag">220/Día</span>
+          </div>
+          <h3>SUV 4x4 Premium</h3>
+          <h4>SUV Familiar</h4>
+          <p>Espacio y seguridad para toda la familia para viajes largos.</p>
+          <button>Reservar Ahora</button>
+        </article>
+
+        <article class="cars-card">
+          <div class="image-wrapper">
+            <img class="cars-photo" src="assets/img/car4.jpg"
+              alt="Ferrari Purosangre gris oscuro estacionado en una concesionaria">
+            <span class="price-tag">1,800/Día</span>
+          </div>
+          <h3>Ferrari Purosangre</h3>
+          <h4>SUV Familiar</h4>
+          <p>Experiencia de conducción única e inolvidable.</p>
+          <button>Reservar Ahora</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-us">
+      <div class="us-tittle">
+        <h2>Sobre Nosotros</h2>
+        <p>Con más de 15 años de experiencia en el sector de alquiler de vehículos, RentCar Premium se ha consolidado
+          como líder en servicios de movilidad premium en toda la región.</p>
+        <p>Nuestra misión es proporcionar experiencias de conducción excepcionales, combinando una flota de vehículos de
+          última generación con un servicio al cliente incomparable. Creemos que cada viaje debe ser memorable y sin
+          preocupaciones.</p>
+
+        <ul class="us-list">
+          <li>
+            <div class="icon-bg">
+              <img src="./assets/icons/icon-arrow-right.png" alt="Icono">
             </div>
-        </section>
+            <div class="list-text">
+              <span><b>Calidad Garantizada</b></span>
+              <p>Vehículos revisados y mantenidos bajo estándares premium</p>
+            </div>
+          </li>
+          <li>
+            <div class="icon-bg">
+              <img src="./assets/icons/icon-arrow-right.png" alt="Icono">
+            </div>
+            <div class="list-text">
+              <span><b>Transparencia Total</b></span>
+              <p>Sin cargos ocultos, precios claros desde el inicio</p>
+            </div>
+          </li>
+          <li>
+            <div class="icon-bg">
+              <img src="./assets/icons/icon-arrow-right.png" alt="Icono">
+            </div>
+            <div class="list-text">
+              <span><b>Atención Personalizada</b></span>
+              <p>Equipo dedicado disponible 24/7 para asistirte</p>
+            </div>
+          </li>
+        </ul>
+      </div>
 
-        <section class="services">
-          <div class="service-tittle">
-            <h2><b>Nuestros Servicios</b></h2>
-            <p>Ofrecemos soluciones completas de alquiler de vehículos con servicios premium incluidos</p>
-          </div>
-          <div class="container-serveces">
-            <article class="card">
-              <img class="calendar-icon" src="assets/icons/icon-calendar.png" alt="Icono azul de calendario">
-              <h3>Alquiler por Día</h3>
-              <p>Renta vehículos por el tiempo que necesites, desde un día hasta varios meses.</p>
-            </article>
+      <div class="container-grid-cards">
+        <article class="grid-card">
+          <img src="./assets/icons/icon-medal.png" alt="Icono Experiencia" class="card-icon">
+          <span class="card-number">15+</span>
+          <span class="card-text">Años de Experiencia</span>
+        </article>
+        <article class="grid-card">
+          <img src="./assets/icons/icon-car.png" alt="Icono Vehículos" class="card-icon">
+          <span class="card-number">500+</span>
+          <span class="card-text">Vehículos Disponibles</span>
+        </article>
+        <article class="grid-card">
+          <img src="./assets/icons/icon-users.png" alt="Icono Clientes" class="card-icon">
+          <span class="card-number">10K+</span>
+          <span class="card-text">Clientes Satisfechos</span>
+        </article>
+        <article class="grid-card">
+          <img src="./assets/icons/icon-arrow-up.png" alt="Icono Tasa" class="card-icon">
+          <span class="card-number">98%</span>
+          <span class="card-text">Tasa de Satisfacción</span>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
 
-            <article class="card">
-              <img src="assets/icons/icon-users.png" alt="Icono azul de usuarios">
-              <h3>Alquiler Corporativo</h3>
-              <p>Soluciones personalizadas para empresas con tarifas especiales y gestión de flotas.</p>
-            </article>
-
-            <article class="card">
-              <img src="assets/icons/icon-headphone.png" alt="Icono azul de auriculares">
-              <h3>Asistencia en Ruta</h3>
-              <p>Soporte 24/7 en carretera para cualquier eventualidad durante tu viaje.</p>
-            </article>
-
-            <article class="card">
-              <img src="assets/icons/icon-shield.png" alt="Icono azul de un escudo">
-              <h3>Seguro Incluido</h3>
-              <p>Todos nuestros vehículos cuentan con seguro completo para tu tranquilidad.</p>
-            </article>
-
-            <article class="card">
-              <img src="assets/icons/icon-house.png" alt="Icono azul de una casa">
-              <h3>Entrega a Domicilio</h3>
-              <p>Llevamos el vehículo directamente a tu ubicación sin costo adicional.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="cars">
-          <div class="cars-tittle">
-            <h2><b>Vehiculos Destacados</b></h2>
-            <p>Nuestra selección premium de vehículos disponibles para renta inmediata.</p>
-          </div>
-          <div class="container-serveces">
-            <article class="cars-card">
-              <div class="image-wrapper">
-                <img class="cars-photo" src="assets/img/car1.jpg" alt="Lamborghini Huracan rojo estacionado en una carretera">
-                <span class="price-tag">1,200/Dia</span>
-              </div>
-              <h3>Lamborgini Huracan</h3>
-              <h4>Superdeportivo</h4>
-              <p>Velocidad y elegancia en un vehículo icónico.</p>
-              <button>Reservar Ahora</button>
-            </article>
-
-            <article class="cars-card">
-              <div class="image-wrapper">
-                <img class="cars-photo" src="assets/img/car2.jpg" alt="BMW Serie 5 color gris">
-                <span class="price-tag">350/Día</span>
-              </div>
-              <h3>BMW Serie 5</h3>
-              <h4>Ejecutivo</h4>
-              <p>Ideal para viajes de negocios, con un interior lujoso y tecnología avanzada.</p>
-              <button>Reservar Ahora</button>
-            </article>
-
-            <article class="cars-card">
-              <div class="image-wrapper">
-                <img class="cars-photo" src="assets/img/car3.jpg" alt="SUV 4x4 Premium color gris estacionado en un paisaje montañoso">
-                <span class="price-tag">220/Día</span>
-              </div>
-              <h3>SUV 4x4 Premium</h3>
-              <h4>SUV Familiar</h4>
-              <p>Espacio y seguridad para toda la familia para viajes largos.</p> 
-              <button>Reservar Ahora</button>
-            </article>
-
-             <article class="cars-card">
-              <div class="image-wrapper">
-                <img class="cars-photo" src="assets/img/car4.jpg" alt="Ferrari Purosangre gris oscuro estacionado en una concesionaria">
-                <span class="price-tag">1,800/Día</span>
-              </div>
-              <h3>Ferrari Purosangre</h3>
-              <h4>SUV Familiar</h4>
-              <p>Experiencia de conducción única e inolvidable.</p>
-              <button>Reservar Ahora</button>
-            </article>
-          </div>
-        </section>
-
-        <section class="section-us">
-          <div class="us-tittle">
-            <h2><b>Sobre Nosotros</b></h2>
-            <p>Con más de 15 años de experiencia en el sector de alquiler de vehículos, RentCar Premium se ha consolidado como líder en servicios de movilidad premium en toda la región.</p><br>
-            <p>Nuestra misión es proporcionar experiencias de conducción excepcionales, combinando una flota de vehículos de última generación con un servicio al cliente incomparable. Creemos que cada viaje debe ser memorable y sin preocupaciones.</p>
-          </div>
-          <div class="container-grid-cards">
-            <article class="grid-card"></article>
-            <article class="grid-card"></article>
-            <article class="grid-card"></article>
-            <article class="grid-card"></article>
-          </div>
-        </section>
-    </main> 
-  </body>
 </html>
