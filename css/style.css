@@ -63,6 +63,10 @@ nav {
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+.menu-checkbox, .hamburger-label {
+    display: none;
+}
+
 ul {
     list-style: none;
     display: flex;
@@ -415,16 +419,16 @@ article button{
 }
 
 .grid-card {
-        background-color: #fff;
-        padding: 30px;
-        border-radius: 20px;
-        text-align: center;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-        border: 1px solid #f0f0f0;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #f0f0f0;
 }
 
 .card-icon {
@@ -574,6 +578,187 @@ footer {
     margin-left: 0;
 }
 
-#contactos:smooth {
-    scroll-behavior: smooth;
+/* Media Queries para Tablets y Desktop */
+@media (max-width: 1024px) {
+
+    nav {
+        padding: 15px 5%;
+        gap: 15px;
+        justify-content: space-between;
+    }
+
+    .hero {
+        height: 65vh; 
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .section-us {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0 !important;
+        padding: 40px 5%;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .list-text {
+        align-items: flex-start;
+    }
+
+    .us-tittle {
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-grid-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .grid-card {
+        padding: 20px;
+        width: 100%;
+        height: auto; 
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 40px; 
+        text-align: left; 
+    }
+}
+
+/* Media Queries para Moviles */
+@media (max-width: 768px) {
+    
+    nav {
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 5%;
+        width: 100%;
+    }
+
+    .hamburger-label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .hamburger-icon {
+        width: 30px;
+        height: auto;
+    }
+
+    nav ul, .nav-links { 
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0;
+        margin: 0;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .menu-checkbox:checked ~ ul.nav-links {
+        display: flex;
+    }
+
+    .menu-checkbox {
+        display: none;
+    }
+
+    .button-reserve, nav button, nav .btn-reserve {
+        display: none;
+    }
+
+    .hero {
+        height: 60vh;
+    }
+
+    .hero-content {
+        padding-left: 5%;
+        text-align: center;
+    }
+
+    .section-us {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .us-tittle {
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ul-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .list-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        text-align: center;
+    }
+
+    .container-grid-cards {
+        display: grid;
+        grid-template-columns: 1fr; 
+        gap: 20px;
+        justify-items: center;
+        width: 100%;
+    }
+
+    .grid-card {
+        padding: 20px;
+        width: 100%;
+        max-width: 280px;
+        height: auto; 
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1fr; 
+        gap: 35px;
+        text-align: center; 
+    }
+
+    .footer-column, .footer-container ul, 
+    .footer-container .us-list li, 
+    .footer-container .schedule-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
 }
