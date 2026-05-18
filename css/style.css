@@ -844,6 +844,18 @@ footer {
     background-color: #e2e2e2;
 }
 
+.form-p div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-p {
+    text-align: center;
+    justify-items: center;
+    color: #4b5563;;
+}
+
 /** Media Queries para Tablets y Desktop **/
 @media (max-width: 1024px) {
 
