@@ -1,11 +1,11 @@
 :root{
-    --primary-color-button: #1E90FF;  /* Color principal botones*/
-    --hero-button-color: #bcdeff; /* Color de fondo del botón principal en la sección hero */
-    --hero-button-transparent-color: #f3f3f321; /* Color de fondo del botón transparente en la sección hero */
-    --color-background: #F5F5F5;  /* Color de fondo general */
-    --color-text: #fff; /* Color de texto general en la seccion del Hero*/
+    --primary-color-button: #1E90FF;  /** Color principal botones*/
+    --hero-button-color: #bcdeff; /** Color de fondo del botón principal en la sección hero */
+    --hero-button-transparent-color: #f3f3f321; /** Color de fondo del botón transparente en la sección hero */
+    --color-background: #F5F5F5;  /** Color de fondo general */
+    --color-text: #fff; /** Color de texto general en la seccion del Hero*/
 
-    /*Color de todos los iconos: #175bfc */
+    /** Color de todos los iconos: #175bfc  **/
 }
 
 *{
@@ -67,6 +67,11 @@ nav {
     display: none;
 }
 
+.nav-reserve-btn {
+    display: none;
+}
+
+
 ul {
     list-style: none;
     display: flex;
@@ -109,8 +114,6 @@ button{
 button:hover{
     background-color: #1474d4;
 }
-
-
 
 .hero{
     background-image:
@@ -224,7 +227,7 @@ h1{
 .card img {
     width: 50px;
     height: 50px;
-    background-color: #d7e6ff; /* Fondo azul detras del icono*/
+    background-color: #d7e6ff; /** Fondo azul detras del icono*/
     padding: 10px;
     border-radius: 10px;
 }
@@ -291,7 +294,7 @@ article h4 {
 }
 
 .price-tag {
-    position: absolute; /* Superpone el elemento en una capa superior */
+    position: absolute; /** Superpone el elemento en una capa superior */
     top: 8px;
     right: 8px;
     background-color: var(--color-background);
@@ -361,14 +364,14 @@ article button{
 }
 
 .icon-bg {
-    background-color: #175bfc; 
+    background-color: #175bfc;
     width: 30px;
     height: 30px;
-    border-radius: 50%; /* Lo hago circular */
+    border-radius: 50%; /**Lo hago circular */
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8px; /* Controlo que tan grande se ve el icono adentro del círculo */
+    padding: 8px;/** Controlo que tan grande se ve el icono adentro del círculo */
 }
 
 .icon-bg img {
@@ -414,7 +417,7 @@ article button{
 .container-grid-cards {
     flex: 1;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /*Creo el cuadrado 2x2*/
+    grid-template-columns: repeat(2, 1fr); /** Creo el cuadrado 2x2*/
     gap: 25px;
 }
 
@@ -434,7 +437,7 @@ article button{
 .card-icon {
     width: 50px;
     height: 50px;
-    object-fit: contain; /* El icono mantiene su proporción sin distorsionarse */
+    object-fit: contain; /** El icono mantiene su proporción sin distorsionarse */
     margin-bottom: 5px;
 }
 
@@ -578,7 +581,270 @@ footer {
     margin-left: 0;
 }
 
-/* Media Queries para Tablets y Desktop */
+/** Estilos para el formulario **/
+
+.container-exit-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exit-button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #4b5563;
+    padding: 10px 0;
+    transition: var(--color-text) 0.3 ease;
+}
+
+.exit-button img {
+    padding: 10px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    object-fit: contain; /** El icono mantiene su proporción sin distorsionarse */
+}
+
+.exit-button:hover {
+    background: none;
+    color: #727272;
+}
+
+.form-tittle {
+    text-align: center;
+    margin: 60px 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-tittle img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.form-tittle h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.form-tittle p {
+    font-size: 1.05rem;
+    color: #666;
+    max-width: 500px;
+    line-height: 1.5;
+}
+
+.booking-form {
+    background-color: var(--color-background);
+    border-radius: 20px;
+    padding: 45px 50px;
+    max-width: 850px;
+    margin: 0 auto 80px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.09);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form-section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #0b1a30;
+    margin-bottom: 5px;
+}
+
+.form-section-header img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.form-section-header h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.booking-form hr {
+    border: none;
+    border-top: 1px solid #d8d7d7;
+    margin: 15px 0 ;
+}
+
+.form-row {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+}
+
+.form-group {
+    flex: 1; /** Obliga a que ambos campos midan exactamente lo mismo */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    margin-top: 16px;
+}
+
+.radio-label {
+    flex: 1;
+    display: flex;
+    flex-direction: flex-start;
+    align-items: start;
+    justify-content: start;
+    gap: 12px;
+    padding: 24px 16px;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.radio-label span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.radio-label:hover{
+    background-color: #eff6ff;
+    border-color: #175bfc;
+}
+
+.check-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    margin-top: 16px;
+}
+
+.check-group label {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    height: 55px;
+    border-radius: 8px;
+    padding: 0 16px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.check-group label:hover {
+    background-color: #eff6ff;
+    border-color: #175bfc;
+}
+
+.check-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #175bfc;
+}
+
+.check-group span {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #4b5563;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #374151;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.form-group input, 
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 0.95rem;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    color: #1f2937;
+    outline: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: all 0.3 ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9ca3af;
+}
+
+.form-group input:focus, 
+.form-group select:focus,
+.form-group textarea:focus {
+    background-color: #ffffff;
+    border-color: #175bfc;
+    box-shadow:0 0 0 4px rgba(23, 91, 252, 0.08); 
+}
+
+.container-submit-button {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 100%;
+    height: 55px;
+}
+
+.submit-button {
+    flex: 2;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: var(--primary-color-button);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.submit-button img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
+.reset-button {
+    flex: 1;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #e5e7eb;
+    background-color: #f3f4f6;
+    color: #4b5563;
+}
+
+.reset-button:hover{
+    background-color: #e2e2e2;
+}
+
+/** Media Queries para Tablets y Desktop **/
 @media (max-width: 1024px) {
 
     nav {
@@ -640,7 +906,7 @@ footer {
     }
 }
 
-/* Media Queries para Moviles */
+/** Media Queries para Moviles */
 @media (max-width: 768px) {
     
     nav {
@@ -662,6 +928,27 @@ footer {
     .hamburger-icon {
         width: 30px;
         height: auto;
+    }
+
+    .button-reserve {
+        display: none;
+    }
+
+    .nav-links .nav-reserve-btn {
+        display: block;
+        background-color: #175bfc;
+        color: white !important;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 15px;
+        box-shadow: 0 4px 10px rgba(23, 91, 252, 0.2);
+        text-decoration: none;
+    }
+
+    .nav-links .nav-reserve-btn:active {
+        background-color: #0b46d1;
     }
 
     nav ul, .nav-links { 
@@ -760,5 +1047,43 @@ footer {
         align-items: center;
         justify-content: center;
         padding: 0;
+    }
+}
+
+/** Media Quieries para el formulario*/
+@media (max-width: 480px) {
+    
+    .booking-form {
+        padding: 30px 16px;
+        gap: 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .container-submit-button {
+        flex-direction: column;
+        height: auto;
+        gap: 12px;
+    }
+
+    .submit-button, 
+    .reset-button {
+        flex: none;
+        width: 100%;
+        padding: 16px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .form-tittle h1 {
+        font-size: 1.8rem;
+    }
+    
+    .form-tittle p {
+        font-size: 0.95rem;
+        padding: 0 10px;
     }
 }

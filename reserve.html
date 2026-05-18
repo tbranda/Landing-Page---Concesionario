@@ -1,13 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/icons/icons8-alquiler-de-coches-100.png" type="image" />
     <link rel="stylesheet" href="./css/style.css">
-    <title>formulario</title>
+    <title>Formulario RentaCar</title>
 </head>
+
 <body>
-   <h1>Formulario de Reserva</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nostrum, consequuntur odio aliquid consequatur illo labore perspiciatis molestias beatae odit quae unde dolorem voluptates nulla quia amet, in magni? Laboriosam.</p>
+
+    <!--* Boton de regreso al inicio -->
+    <div class="container-exit-button">
+        <a href="./index.html">
+            <button class="exit-button">
+                <img src="./assets/icons/icon-arrow-left.png" alt="Flecha izquierda gris">
+                <span>Volver al inicio</span>
+            </button>
+        </a>
+    </div>
+
+    <div class="form-tittle">
+        <img src="./assets/icons/icons8-alquiler-de-coches-100.png" alt="Icono de un auto azul">
+        <h1>Formulario de Reserva</h1>
+        <p>Completa el formulario para reservar tu vehículo ideal</p>
+    </div>
+
+    <form method="POST" action="procesar-reserva" class="booking-form">
+
+        <!--* Seccion de información personal -->
+
+        <div class="form-section-header">
+            <img src="./assets/icons/icon-user.png" alt="Icono de un usuario azul">
+            <h2>Información Personal</h2>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="name">Nombre Completo *</label>
+                <input type="text" id="name" name="name" placeholder="Ej: Juan Pérez García" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico *</label>
+                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="phone">Número de Teléfono *</label>
+                <input type="tel" id="phone" name="phone" placeholder=" +54 (336) 123-4567" required>
+            </div>
+            <div class="form-group">
+                <label for="license">DNI/Pasaporte *</label>
+                <input type="text" id="license" name="license" placeholder="12345678" required>
+            </div>
+        </div>
+
+        <hr>
+
+        <!--* Sección de detalles de reserva -->
+
+        <div class="form-section-header">
+            <img src="./assets/icons/icon-calendar.png" alt="Icono de un usuario azul">
+            <h2>Infomacion de la Reserva</h2>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="vehicle">Tipo de Vehículo *</label>
+                <input type="text" id="vehicle" name="vehicle_type" list="vehicle-list"
+                    placeholder="Selecciona o escribe..." required>
+                <!--* Se utiliza un input con datalist para permitir selección o entrada manual -->
+                <datalist id="vehicle-list">
+                    <option value="SUV Familiar"></option>
+                    <option value="Superdeportivo"></option>
+                    <option value="Ejecutivo"></option>
+                </datalist>
+            </div>
+            <div class="form-group">
+                <label for="car-model">Modelo Seleccionado *</label>
+                <input type="text" id="car-model" name="car_model" list="car-list" placeholder="Selecciona o escribe..."
+                    required>
+
+                <datalist id="car-list">
+                    <option value="Lamborgini Huracán"></option>
+                    <option value="BMW Series 5"></option>
+                    <option value="Ferrari Purosangre"></option>
+                    <option value="Suzuki S-Cross"></option>
+                </datalist>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="reteriment-date">Fecha de Retiro *</label>
+                <input type="date" id="reteriment-date" name="retirement_date" required>
+            </div>
+            <div class="form-group">
+                <label for="return-date">Fecha de Devolución *</label>
+                <input type="date" id="return-date" name="return_date" required>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="reteriment-time">Hora de Retiro</label>
+                <input type="time" id="reteriment-time" name="retirement_time" placeholder=" --:-- " required>
+            </div>
+            <div class="form-group">
+                <label for="pickup-location">Sucursal de Retiro</label>
+                <select id="pickup-location" name="pickup_location" required>
+                    <option value="" disabled selected>Selecciona una sucursal...</option>
+                    <option value="Sucursal Centro">Sucursal Centro</option>
+                    <option value="Sucursal Norte">Sucursal Norte</option>
+                    <option value="Sucursal Sur">Sucursal Sur</option>
+                </select>
+            </div>
+        </div>
+
+        <hr>
+
+        <!--* Sección de Metodos de Pago -->
+
+        <div class="form-section-header">
+            <img src="./assets/icons/icon-wallet.png" alt="Icono de una tarjeta azul">
+            <h2>Metodos de Pago</h2>
+        </div>
+
+        <!--* Se utiliza un grupo de radio buttons para seleccionar el método de pago -->
+
+        <div class="radio-group">
+            <label class="radio-label">
+                <input type="radio" name="payment_method" value="credit_card" required>
+                <span>Tarjeta de Crédito</span>
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="payment_method" value="debit_card" required>
+                <span>Tarjeta de Débito</span>
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="payment_method" value="efective" required>
+                <span>Efectivo (Pago en sucursal)</span>
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="payment_method" value="bank-transference" required>
+                <span>Transferencia Bancaria</span>
+            </label>
+        </div>
+
+        <hr>
+
+        <!--* Opciones adicionales -->
+
+        <div class="form-section-header">
+            <h2>Opciones Adicionales</h2>
+        </div>
+        <div class="check-group">
+            <label class="check-label">
+                <input type="checkbox" name="additional_options" value="gps">
+                <span>GPS Incluido</span>
+            </label>
+            <label class="check-label">
+                <input type="checkbox" name="additional_options" value="child-seat">
+                <span>Silla para niños</span>
+            </label>
+            <label class="check-label">
+                <input type="checkbox" name="additional_options" value="insurance">
+                <span>Seguro adicional</span>
+            </label>
+        </div>
+
+        <!--* Comentarios adicionales -->
+
+        <div class="form-group">
+            <label for="comments">Comentarios Adicionales</label>
+            <textarea id="comments" name="comments" rows="4"
+                placeholder="Si tienes alguna solicitud especial o comentario sobre tu reserva, escríbelo aquí..."></textarea>
+        </div>
+
+        <!--* Boton de envio y limpieza del formulario -->
+
+        <div class="container-submit-button">
+            <button type="submit" class="submit-button">
+                <span>Enviar Reserva</span>
+            </button>
+            <button type="reset" class="reset-button">
+                Limpiar Formulario
+            </button>
+        </div>
+    </form>
 </body>
+
 </html>
