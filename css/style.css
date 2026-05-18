@@ -987,6 +987,33 @@ footer {
         text-align: center;
     }
 
+    .hero-content h1 {
+        font-size: 1.6rem;
+        text-align: start;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+        text-align: start;
+    }
+
+    .container-serveces {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .card {
+        margin-bottom: 0; /** Quito los espacios vacios entre las cards de servicios */
+        gap: 15px; /** Le asigno un nuevo espaciado mas chico */
+    }
+
+    .cars-card {
+        margin-bottom: 0; /** Quito los espacios vacios entre las cards de vehiculos */
+    }
+
     .section-us {
         display: flex;
         flex-direction: column;
@@ -1002,19 +1029,23 @@ footer {
         justify-content: center;
     }
 
+    .us-tittle p {
+        text-align: start;
+    }
+
     .ul-list {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 15px;
+        gap: 10px;
     }
 
     .list-text {
         display: flex;
         flex-direction: column;
-        align-items: center; 
-        text-align: center;
+        align-items: flex-start; 
+        text-align: flex-start;
     }
 
     .container-grid-cards {
@@ -1040,12 +1071,14 @@ footer {
     }
 
     .footer-column, .footer-container ul, 
-    .footer-container .us-list li, 
+    .footer-container .us-list li,
+    .footer-column-branding, 
     .footer-container .schedule-item {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        align-items: start;
+        justify-content: start;
+        text-align: start;
         padding: 0;
     }
 }
